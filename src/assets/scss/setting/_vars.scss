@@ -1,0 +1,40 @@
+$black1E: #1e2530;
+$black06: #060606;
+$black: #000000;
+$white: #ffffff;
+$red: #ff3d45;
+
+$green21: #219653;
+
+$graya5: #a5acb8;
+$grayD6: #d6d9e1;
+$graye5: #e5e8f0;
+$grayf1: #f1f3f7;
+$grayf6: #f6f6f6;
+$gray83: #838a93;
+$gray55: #555d67;
+$gray1e: #1e2530;
+$gray06: #060606;
+$gray55: #555d67;
+
+$purple: #bb6bd9;
+
+$skyblue: #56ccf2;
+
+// 이미지 경로
+$imgurl: "/src/assets/img/";
+
+// Badge
+// 클래스명, 높이, border-radius, color, background-color, padding, font-size, line-height, border-color
+$badgeSetting: "black" 20 3 $white $black1E (rem(1) rem(4)) 13 18 $black1E,
+  "black2" 20 20 $white $black1E (rem(1) rem(8)) 13 18 $black1E,
+  "white" 20 20 $black1E $white (rem(2) rem(8)) 11 16 $grayD6,
+  "purple" 20 20 $white $purple (rem(1) rem(8)) 13 18 $purple,
+  "skyblue" 20 3 $white $skyblue (rem(1) rem(7)) 13 18 $skyblue,
+  "gray" 18 3 $black1E $graye5 (rem(1) rem(4)) 11 16 $graye5,
+  "green" 22 20 $white $green21 (rem(2) rem(8)) 13 18 $green21;
+
+// Button
+// 클래스명, 높이, border-radius, color, background-color, padding, font-size, line-height, border-color
+$buttonSetting: "black" 47 30 $white $black1E (rem(12) rem(19)) 15 23 $black1E,
+  "white" 47 30 $black1E $white (rem(12) rem(19)) 15 23 $grayD6;

@@ -1,0 +1,54 @@
+.toggle-box {
+  &__btn {
+    position: relative;
+    width: 100%;
+    height: rem(55);
+    padding: rem(13) rem(16);
+    box-sizing: border-box;
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: rem(29);
+    color: $black1E;
+    &::after {
+      @include position(right, rem(16), top, 50%);
+      @include bg("Icons_ArrowDown_20.svg", center);
+      content: "";
+      width: rem(20);
+      height: rem(20);
+      transform: translateY(-50%) rotate(0deg);
+      transition: 0.3s;
+    }
+    &.active::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  &__content {
+    padding: rem(8) rem(16);
+  }
+}
+
+.paymentAmount-box {
+  &__toggle {
+    display: inline;
+    position: relative;
+    height: rem(55);
+    // padding: rem(13) rem(16);
+    box-sizing: border-box;
+    // font-size: rem(18);
+    // font-weight: 400;
+    // line-height: rem(29);
+    // color: $black1E;
+    &::after {
+      @include position(right, 0, top, 50%);
+      @include bg("Icons_ArrowDown_20.svg", center);
+      content: "";
+      width: rem(20);
+      height: rem(20);
+      transform: translateY(-50%) rotate(0deg);
+      transition: 0.3s;
+    }
+    &.active::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

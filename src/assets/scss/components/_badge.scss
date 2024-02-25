@@ -1,0 +1,15 @@
+.badge {
+  &-list {
+    @include flex-between;
+    .list & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: rem(2);
+    }
+  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}

@@ -1,0 +1,123 @@
+// 가운데 정렬
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 양쪽 정렬
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 중앙 정렬
+@mixin position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 상단 고정
+@mixin position-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+@mixin position($x, $xvalue, $y: null, $yvalue: null) {
+  position: absolute;
+  #{$x}: $xvalue;
+  #{$y}: $yvalue;
+
+  @if $xvalue == 50% and $yvalue == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $xvalue == 50% {
+    transform: translateX(50%);
+  } @else if $yvalue == 50% {
+    transform: translateY(-50%);
+  }
+}
+
+@mixin hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+// 배경이미지
+/**
+  * @param {string} $imgfile - 이미지 파일명
+  * @param {string} $x - x축 위치
+  * @param {string} $y - y축 위치
+  * @param {string} $bgcolor - 배경색
+  * @param {string} $width - 너비
+  * @param {string} $height - 높이
+  **/
+@mixin bg(
+  $imgfile,
+  $x: null,
+  $y: null,
+  $bgcolor: null,
+  $width: null,
+  $height: null
+) {
+  background: url(#{$imgurl}#{$imgfile}) no-repeat $x $y $bgcolor;
+  background-size: $width $height;
+}
+// badge
+// 클래스명, 높이, border-radius, color, background-color, padding, font-size, line-height, border-color
+@each $class, $height, $borderRadius, $color, $bg-color, $padding, $fontSize,
+  $lineHeight, $borderColor in $badgeSetting
+{
+  .badge.#{$class} {
+    height: rem($height);
+    border-radius: rem($borderRadius);
+    color: $color;
+    background-color: $bg-color;
+    padding: $padding;
+    font-size: rem($fontSize);
+    line-height: rem($lineHeight);
+    box-sizing: border-box;
+    border: 1px solid $borderColor;
+  }
+}
+// button
+// 클래스명, 높이, border-radius, color, background-color, padding, font-size, line-height, border-color
+@each $class, $height, $borderRadius, $color, $bg-color, $padding, $fontSize,
+  $lineHeight, $borderColor in $buttonSetting
+{
+  .btn.#{$class} {
+    font-weight: 500;
+    height: rem($height);
+    border-radius: rem($borderRadius);
+    color: $color;
+    background-color: $bg-color;
+    padding: $padding;
+    font-size: rem($fontSize);
+    line-height: rem($lineHeight);
+    box-sizing: border-box;
+    border: 1px solid $borderColor;
+  }
+}
+
+// 빈 컨텐츠 아이콘
+@mixin empty($width, $height, $img) {
+  margin: 0 auto;
+  width: rem($width);
+  height: rem($height);
+  @include bg(#{$img} + ".svg", center);
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

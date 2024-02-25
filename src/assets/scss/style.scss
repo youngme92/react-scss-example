@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// setting 순서 중요
+@import "setting/function";
+@import "setting/vars";
+@import "setting/mixin";
+
+@import "setting/reset";
+@import "setting/fonts"; // 폰트 정의
+
+// layout
+
+@import "layout/header"; // header
+@import "layout/footer"; // footer
+@import "layout/guide"; // guide
+@import "layout/space"; // space
+@import "layout/align"; // align
+@import "layout/sub"; // sub
+
+// components
+
+@import "components/button"; // buttons
+@import "components/tab"; // tab
+@import "components/shop"; // shop
+@import "components/badge"; // badge
+@import "components/form"; // form
+@import "components/empty"; // empty
+@import "components/toggle"; // toggle
+
+body {
+  padding-bottom: 70px;
+}

@@ -1,0 +1,36 @@
+.empty-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__img {
+    &1 {
+      @include empty(80, 90, Icons_empty1);
+    }
+    &2 {
+      @include empty(99, 96, Icons_empty2);
+    }
+  }
+  &__text {
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: rem(29);
+    color: $gray55;
+    b {
+      display: block;
+      padding: rem(4) 0 0 0;
+      font-size: rem(15);
+      font-weight: 700;
+      line-height: rem(23);
+      color: $graya5;
+    }
+  }
+  &.height-type1 {
+    height: calc(100vh - rem(265));
+  }
+  &.height-type2 {
+    height: calc(100vh - rem(123));
+  }
+}

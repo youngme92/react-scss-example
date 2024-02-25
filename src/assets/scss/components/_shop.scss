@@ -1,0 +1,98 @@
+.shop-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(15);
+  &__thumb {
+    position: relative;
+    background-color: $grayf6;
+    border-radius: rem(12);
+    overflow: hidden;
+    .badge {
+      @include position(left, rem(12), top, rem(12));
+    }
+    &__large {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__small {
+      @include position(right, rem(8), bottom, rem(8));
+      width: vw(56);
+      height: vw(56);
+      border-radius: 100%;
+      border: 1px solid $grayD6;
+      .list & {
+        width: vw(48);
+        height: vw(48);
+      }
+      .card & {
+        width: vw(96);
+        height: vw(96);
+      }
+    }
+  }
+  &__title {
+    text-align: left;
+    color: $black1E;
+    font-size: rem(13);
+    font-weight: 500;
+    line-height: rem(18);
+  }
+  &__price {
+    display: grid;
+    grid-template-columns: minmax(rem(40), auto) minmax(rem(40), 1fr);
+    text-align: left;
+    gap: rem(2) rem(4);
+    &--sale {
+      grid-column: 1 /3;
+      font-size: rem(13);
+      font-weight: 700;
+      line-height: rem(18);
+      color: $red;
+    }
+    &--original {
+      font-size: rem(11);
+      font-weight: 500;
+      line-height: rem(16);
+      text-decoration: line-through;
+      color: $gray83;
+    }
+    &--sell {
+      font-size: rem(13);
+      font-weight: 700;
+      line-height: rem(18);
+      color: $black1E;
+    }
+  }
+  &__rating {
+    @include bg("Icons_Star.svg", left);
+    padding-left: rem(18);
+    font-size: rem(11);
+    font-weight: 500;
+    line-height: rem(16);
+    text-align: left;
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(3);
+  }
+  &__funcBtn {
+    display: flex;
+    gap: rem(12);
+  }
+  &.list {
+    grid-template-columns: 1fr;
+    > li {
+      display: grid;
+      grid-template-columns: vw(100) 1fr;
+      gap: rem(3) rem(16);
+    }
+    a:first-child {
+      grid-row: 1 / 3;
+    }
+  }
+  &.card {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,77 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &-prev {
+    @include bg("Icons_Back_24.svg", center, null, null, rem(24), auto);
+    width: rem(40);
+    height: rem(40);
+    // background: url(/src/assets/img/Icons_Back_24.svg) no-repeat center;
+  }
+  &-home {
+    @include bg("Icons_Home_24.svg", center, null, null, rem(24), auto);
+    width: rem(40);
+    height: rem(40);
+    // background: url(/src/assets/img/Icons_Back_24.svg) no-repeat center;
+  }
+  &-close {
+    @include bg("Icons_Close_24.svg", center, null, null, rem(24), auto);
+    width: rem(40);
+    height: rem(40);
+    // background: url(/src/assets/img/Icons_Back_24.svg) no-repeat center;
+  }
+  &-list {
+    @include bg("Icons_List_24.svg", center, null, null, rem(24), auto);
+    width: rem(40);
+    height: rem(40);
+    // background: url(/src/assets/img/Icons_List_24.svg) no-repeat center;
+  }
+  &-cart {
+    position: relative;
+    width: rem(40);
+    height: rem(40);
+    @include bg("Icons_Cart_24.svg", center, null, null, rem(24), auto);
+    // background: url(/src/assets/img/Icons_Cart_24.svg) no-repeat center;
+    span {
+      @include position(right, rem(1), top, rem(4));
+      padding: 0 rem(6);
+      height: rem(16);
+      background-color: $red;
+      color: $white;
+      border-radius: rem(16);
+      font-family: Noto Sans KR;
+      font-size: rem(11);
+      font-weight: 500;
+      line-height: rem(16);
+    }
+    .shop-list & {
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+  &-like {
+    @include bg("Icons_Like_20.svg", center);
+    width: rem(20);
+    height: rem(20);
+  }
+  &-arrow {
+    @include bg("Icons_ArrowRight_16.svg", right);
+    display: flex;
+    padding-right: rem(17);
+    font-size: rem(13);
+    font-weight: 500;
+    line-height: rem(18);
+    color: $gray55;
+  }
+  &-agree {
+    @include bg("Icons_ArrowRight_16.svg", center);
+    display: block;
+    width: rem(24);
+    height: rem(24);
+  }
+  &-card {
+    @include bg("Icons_QR_Sheets_Add.svg", center);
+    width: rem(24);
+    height: rem(24);
+  }
+}

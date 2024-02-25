@@ -1,0 +1,33 @@
+.mt {
+  &8 {
+    margin-top: rem(8);
+  }
+  &12 {
+    margin-top: rem(12);
+  }
+  &30 {
+    margin-top: rem(30);
+  }
+  &50 {
+    margin-top: rem(50);
+  }
+  &100 {
+    margin-top: rem(100);
+  }
+}
+.ml {
+  &10 {
+    margin-left: rem(10);
+  }
+}
+
+.mx {
+  &-16 {
+    margin: 0 rem(16);
+  }
+}
+.hr-line {
+  height: rem(12);
+  background-color: rgba($grayf1, 0.5);
+  border: none;
+}

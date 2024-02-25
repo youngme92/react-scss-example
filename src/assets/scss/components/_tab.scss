@@ -1,0 +1,84 @@
+.tab {
+  &-type1 {
+    display: flex;
+    background-color: $graye5;
+    height: rem(47);
+    border-radius: rem(47);
+    padding: rem(4);
+    box-sizing: border-box;
+    li {
+      flex: 1;
+      border-radius: rem(40);
+    }
+    a,
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      font-size: rem(15);
+      font-weight: 400;
+      line-height: rem(23);
+      color: $gray55;
+    }
+
+    &--active {
+      background-color: $white;
+      color: $gray55;
+    }
+  }
+
+  &-type2 {
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: rem(8) 0 rem(8) rem(16);
+    > li {
+      display: inline-block;
+    }
+    a,
+    button {
+      display: block;
+      padding: rem(6) rem(16);
+      min-width: rem(60);
+      font-weight: 500;
+      font-size: rem(15);
+      color: $gray83;
+      line-height: rem(23);
+      border-radius: rem(35);
+      box-sizing: border-box;
+    }
+    &--active {
+      a,
+      button {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+  &-type3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid $graye5;
+    border-bottom: 1px solid $graye5;
+    padding: rem(16) rem(16) rem(16) rem(24);
+    gap: rem(17) 0;
+    a,
+    butoon {
+      font-weight: 500;
+      font-size: rem(13);
+      line-height: rem(18);
+      color: $gray83;
+    }
+    &--active {
+      a,
+      button {
+        font-weight: 700;
+        text-decoration: underline;
+        line-height: rem(21);
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,207 @@
+.parcel-info {
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: vw(64) 1fr;
+  grid-template-rows: repeat(4, minmax(rem(10), auto));
+  gap: rem(3) rem(16);
+  &__thumb {
+    grid-row: 1 / 6;
+    align-self: start;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    @include ellipsis;
+    font-size: rem(15);
+    font-weight: 400;
+    line-height: rem(23);
+    color: $black1E;
+  }
+  &__pare-info {
+    font-size: rem(13);
+    font-weight: 500;
+    line-height: rem(18);
+    color: $gray83;
+  }
+  &__premium {
+    font-size: rem(13);
+    font-weight: 500;
+    line-height: rem(18);
+    color: $gray83;
+  }
+  &__pay {
+    font-size: rem(13);
+    font-weight: 700;
+    line-height: rem(18);
+    text-align: left;
+    color: $black1E;
+  }
+}
+
+// 주소록
+
+.address-list {
+  li {
+    display: grid;
+    gap: rem(2);
+    padding: rem(16) 0;
+    &:first-child {
+      padding-top: rem(8);
+    }
+
+    + li {
+      border-top: 1px solid $graye5;
+    }
+  }
+
+  &__title {
+    font-size: rem(15);
+    font-weight: 700;
+    line-height: rem(23);
+    padding-bottom: rem(6);
+    color: $black1E;
+  }
+
+  &__address {
+    font-size: rem(15);
+    font-weight: 400;
+    line-height: rem(23);
+    color: $gray55;
+  }
+  &__name {
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(23);
+    color: $gray55;
+  }
+  &__tel {
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(23);
+    color: $gray55;
+  }
+  &__message {
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(23);
+    color: $gray55;
+  }
+}
+// 할인, 포인트 박스
+.point-box {
+  display: grid;
+  gap: rem(8);
+  ~ .point-box {
+    margin-top: rem(16);
+  }
+  &.line {
+    border-bottom: 1px solid $graye5;
+    padding-bottom: rem(16);
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &__info {
+    display: flex;
+    gap: rem(8);
+    font-size: rem(13);
+    font-weight: 400;
+    line-height: rem(18);
+    color: $gray55;
+    b {
+      font-weight: 500;
+      color: $green21;
+    }
+  }
+  &__input-type1 {
+  }
+  &__input-type2 {
+    display: grid;
+    grid-template-columns: 1fr rem(100);
+    gap: rem(8);
+  }
+}
+
+// 동의 박스
+.agree-box {
+  padding: rem(20) rem(16);
+  ul {
+    display: grid;
+    gap: rem(16);
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// 결제 정보
+.payment-box {
+  padding: rem(16);
+  &__info {
+    font-size: rem(15);
+    font-weight: 500;
+    line-height: rem(23);
+    color: $gray55;
+  }
+  &__method {
+    &-info {
+      margin-bottom: rem(8);
+    }
+  }
+  &__card {
+    padding-left: rem(36);
+    &-gs {
+      @include bg("Icons_GS_Pay.svg", left);
+      width: rem(72);
+      height: rem(24);
+      margin-right: rem(12);
+    }
+    &-info {
+      @include ellipsis;
+      font-size: rem(15);
+      font-weight: 500;
+      line-height: rem(23);
+      color: $gray55;
+      margin-bottom: rem(16);
+    }
+    &-list {
+      display: flex;
+      gap: rem(12);
+      margin-bottom: rem(24);
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      width: rem(180);
+      height: rem(120);
+      padding: rem(25), rem(36);
+    }
+    &-empty {
+      width: rem(150);
+      height: rem(100);
+      padding: rem(25) rem(36);
+      border-radius: rem(12);
+      box-sizing: border-box;
+      border: 2px dotted $grayD6;
+      text-align: center;
+    }
+  }
+}
+
+.paymentAmount-box {
+  padding: rem(13) rem(16) rem(20) rem(16);
+  &__title {
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: rem(29);
+    color: $black1E;
+  }
+}
